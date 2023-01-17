@@ -14,7 +14,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>895,702</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>624,702</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginMailChart_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -89,10 +89,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID5</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID5" DisplayName="isGmail?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-      <FlowDecision.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="thisEmail.Contains(&quot;gmail&quot;)" />
-      </FlowDecision.Condition>
+    <FlowDecision x:Name="__ReferenceID5" Condition="[thisEmail.Contains(&quot;gmail&quot;)]" DisplayName="isGmail?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -112,12 +109,8 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login to Gmail" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login to Gmail and datascrape.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="mail">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="thisEmail" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="pass">
-                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="thisMailPass" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="mail">[thisEmail]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="pass">[thisMailPass]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -128,10 +121,7 @@
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID0" DisplayName="isYahoo?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-          <FlowDecision.Condition>
-            <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="thisEmail.Contains(&quot;yahoo&quot;)" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID0" Condition="[thisEmail.Contains(&quot;yahoo&quot;)]" DisplayName="isYahoo?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,12 +141,8 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login to Yahoo.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Login to Yahoo.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="mail">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="thisEmail" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="pass">
-                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="thisMailPass" />
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="mail">[thisEmail]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="pass">[thisMailPass]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -167,10 +153,7 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID1" DisplayName="isOutlook?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-              <FlowDecision.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="thisEmail.Contains(&quot;outlook&quot;)" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID1" Condition="[thisEmail.Contains(&quot;outlook&quot;)]" DisplayName="isOutlook?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -189,12 +172,8 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login to Outlook.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Login to Outlook.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="mail">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="thisEmail" />
-                      </InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="pass">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="thisMailPass" />
-                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="mail">[thisEmail]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="pass">[thisMailPass]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
