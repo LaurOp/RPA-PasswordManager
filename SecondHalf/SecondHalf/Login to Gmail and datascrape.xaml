@@ -14,7 +14,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>918,3680</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>918,3853</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_to_mail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
@@ -122,7 +122,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Login_to_Gmail" sap:VirtualizedContainerService.HintSize="928,3615" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login_to_Gmail" sap:VirtualizedContainerService.HintSize="928,3788" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="mailsTable" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="foundThisMail" />
@@ -133,6 +133,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" AppliesTo="OnlyCurrentUser" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="866,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Sign in to Gmail - Computer - Gmail Help" sap:VirtualizedContainerService.HintSize="866,3504" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="71547118-5880-4276-a438-fdd5e992a1b1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
